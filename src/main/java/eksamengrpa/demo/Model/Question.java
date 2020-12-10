@@ -1,7 +1,13 @@
 package eksamengrpa.demo.Model;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 public class Question {
+    @Autowired
+    JdbcTemplate template;
+
     private int id;
     private String text;
 
