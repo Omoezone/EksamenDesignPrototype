@@ -10,6 +10,9 @@ public class Test {
     JdbcTemplate template;
 
     private ArrayList<Question> questions = new ArrayList<>();
+    private ArrayList<Integer> answers = new ArrayList<>();
+
+
 
 
 }
