@@ -12,11 +12,18 @@
         <p>BAROMETER</p>
     </div>
     <h1 style="text-align: center">Stressbarometer®</h1>
-    <form>
+    <form action="/frontPage" method="post">
         <div class="loginContainer">
             <!-- Dette div skal indeholde login -->
-            <input type="text" placeholder="Enter email" required>
-            <input type="password" placeholder="Enter password" required>
+            <input type="text" placeholder="Enter email" name="login_email" required>
+            <input type="password" placeholder="Enter password" name="login_password"required>
+            <!-- Type field -->
+            <label>Choose type: </label>
+            <select name="login" id="login">
+                <option value="bruger">Bruger</option>
+                <option value="kunde">Kunde</option>
+                <option value="Admin">Admin</option>
+            </select>
             <button type="submit">Login</button>
         </div>
     </form>
