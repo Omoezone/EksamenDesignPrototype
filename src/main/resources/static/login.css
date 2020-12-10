@@ -1,0 +1,50 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: lightgray;
+}
+
+/* Header/Logo Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: lightslategray;
+    color: white;
+    font-size: 10px;
+}
+/* Page Content */
+.content {padding:20px;}
+
+button {
+    background-color: #4CAF50;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    margin: 10px 0px;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form {
+    border: 3px solid yellow;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button:hover {
+    opacity: 0.7;
+}
+.loginContainer {
+    padding: 25px;
+    background-color: lightsteelblue;
+    margin: auto;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
