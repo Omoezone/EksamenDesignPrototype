@@ -11,4 +11,7 @@ public class LoginAuthenticatorService {
     @Autowired
     LoginAuthenticatorRepo loginAuthenticatorRepo;
 
+    public Boolean authenticate(LoginAuthenticator login){
+        return loginAuthenticatorRepo.authenticate(login);
+    }
 }

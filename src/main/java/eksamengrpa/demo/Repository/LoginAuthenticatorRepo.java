@@ -13,10 +13,10 @@ public class LoginAuthenticatorRepo {
     @Autowired
     JdbcTemplate template;
 
-    private Boolean authenticate(LoginAuthenticator login){
+    public Boolean authenticate(LoginAuthenticator login){
         //midlertidig løsning til at godkende et login
         try{
-            String sql = "SELECT email, password FROM login WHERE email = ? AND password = ?";
+            String sql = "SELECT login_email, login_password FROM login WHERE login_email = ? AND login_password = ?";
             RowMapper<LoginAuthenticator> rowMapper = new BeanPropertyRowMapper<>(LoginAuthenticator.class);
             LoginAuthenticator newLogin = template.queryForObject(sql,rowMapper,login.getEmail(),login.getPassword());
             return true;
