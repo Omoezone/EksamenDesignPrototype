@@ -14,12 +14,15 @@ public class LoginAuthenticatorRepo {
     JdbcTemplate template;
 
     private Boolean authenticate(LoginAuthenticator login){
-        String sql = "SELECT email, password FROM login WHERE email = ? AND password = ?";
-/*
-        RowMapper<LoginAuthenticator> rowMapper = new BeanPropertyRowMapper<>(LoginAuthenticator.class);
-*/
-        return template.query(sql, login.getEmail(), login.getPassword());
-
+        //midlertidig løsning til at godkende et login
+        try{
+            String sql = "SELECT email, password FROM login WHERE email = ? AND password = ?";
+            RowMapper<LoginAuthenticator> rowMapper = new BeanPropertyRowMapper<>(LoginAuthenticator.class);
+            LoginAuthenticator newLogin = template.queryForObject(sql,rowMapper,login.getEmail(),login.getPassword());
+            return true;
+        }catch (Exception exception){
+            System.out.println("It didn't work");
+            return false;
+        }
     }
-
 }
