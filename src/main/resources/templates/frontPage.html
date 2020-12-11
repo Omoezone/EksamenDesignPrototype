@@ -2,29 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/login.css">
     <title>Stressbarometer®</title>
+    <script>
+        function myFunction() {
+            // Sætter et delay på 2 sekunder
+            var delay = 2000;
+            setTimeout(function() {
+                // Error message der vil poppe op
+                document.getElementById("errorid").innerHTML = "Invalid email or password"
+            }, delay);
+        }
+    </script>
 </head>
 <body>
     <!-- Dette indhold skal indeholde header for siden -->
     <div class="header">
-        <h1>Header</h1>
-        <p>BAROMETER</p>
+        <h1 style="text-align: left;font-size:30px";>Stressbarometer®</h1>
     </div>
     <h1 style="text-align: center">Stressbarometer®</h1>
-    <form action="/frontPage" method="post">
+    <form name="loginCheck" action="/frontPage" method="post">
         <div class="loginContainer">
-            <!-- Dette div skal indeholde login -->
-            <input type="text" placeholder="Enter email" name="login_email" required>
-            <input type="password" placeholder="Enter password" name="login_password"required>
-            <!-- Type field -->
-            <label>Choose type: </label>
-            <select name="login" id="login">
-                <option value="bruger">Bruger</option>
-                <option value="kunde">Kunde</option>
-                <option value="Admin">Admin</option>
+            <!-- Dette div indeholder login -->
+            <input type="text" placeholder="Enter email" name="email" required>
+            <input type="password" placeholder="Enter password" name="password" required>
+
+            <!-- Type dropdown -->
+            <label for="login">Choose type: </label>
+            <select name="type" id="login">
+                <option value="typeb">User</option>
+                <option value="typek">Customer</option>
+                <option value="typea">Adin</option>
             </select>
-            <button type="submit">Login</button>
+
+            <p id="errorid"></p>
+            <button onclick="myFunction()" type="submit">Login</button>
         </div>
     </form>
 </body>
