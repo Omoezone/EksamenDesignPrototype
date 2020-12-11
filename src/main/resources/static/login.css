@@ -6,7 +6,7 @@ body {
 
 /* Header/Logo Title */
 .header {
-    padding: 30px;
+    padding: 30px 30px 5px 10px;
     text-align: center;
     background: lightslategray;
     color: white;
@@ -25,9 +25,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-form {
-    border: 3px solid red;
-}
+
 input[type=text], input[type=password] {
     width: 100%;
     margin: 8px 0;
