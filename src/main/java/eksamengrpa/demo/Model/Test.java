@@ -44,4 +44,12 @@ public class Test {
     public void setAnswers(ArrayList<Integer> answers) {
         this.answers = answers;
     }
+
+    public void addQuestion(Question q){
+        questions.add(q);
+    }
+
+    public void addAnswer(Integer i){
+        this.answers.add(i);
+    }
 }
