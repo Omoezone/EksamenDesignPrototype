@@ -1,6 +1,8 @@
 package eksamengrpa.demo.Controller;
 
 import eksamengrpa.demo.Model.LoginAuthenticator;
+import eksamengrpa.demo.Model.Question;
+import eksamengrpa.demo.Model.Test;
 import eksamengrpa.demo.Service.LoginAuthenticatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

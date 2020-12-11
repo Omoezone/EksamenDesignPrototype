@@ -26,7 +26,7 @@ button {
     cursor: pointer;
 }
 form {
-    border: 3px solid yellow;
+    border: 3px solid red;
 }
 input[type=text], input[type=password] {
     width: 100%;
