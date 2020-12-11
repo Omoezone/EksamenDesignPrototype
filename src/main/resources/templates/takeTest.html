@@ -11,50 +11,180 @@
             <thead>
                 <tr>
                     <td><span>Spørgsmål</span></td>
-                    <td><span>Meget uenig</span></td>
-                    <td><span>Lidt uenig</span></td>
-                    <td><span>Hverken enten eller</span></td>
-                    <td><span>Lidt enig</span></td>
-                    <td><span>Meget enig</span></td>
-                    <td><span>Ikke relevant</span></td>
+                    <td><span>Altid</span></td>
+                    <td><span>Ofte</span></td>
+                    <td><span>Sommetider</span></td>
+                    <td><span>Sjældent/aldrig</span></td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><span th:text="${test.questions.get(0).getText()}"/></td>
-                    <td><input type="radio" name="answers[0]" value="1"><br></td>
-                    <td><input type="radio" name="answers[0]" value="2"><br></td>
-                    <td><input type="radio" name="answers[0]" value="3"><br></td>
+                    <td><span th:text="${test.questions.get(0).getQuestion_text()}"/></td>
                     <td><input type="radio" name="answers[0]" value="4"><br></td>
-                    <td><input type="radio" name="answers[0]" value="5"><br></td>
-                    <td><input type="radio" name="answers[0]" value="0"><br></td>
+                    <td><input type="radio" name="answers[0]" value="3"><br></td>
+                    <td><input type="radio" name="answers[0]" value="2"><br></td>
+                    <td><input type="radio" name="answers[0]" value="1"><br></td>
                 </tr>
                 <tr>
-                    <td><span th:text="${test.questions.get(1).getText()}"/></td>
-                    <td><input type="radio" name="answers[1]" value="1"><br></td>
-                    <td><input type="radio" name="answers[1" value="2"><br></td>
-                    <td><input type="radio" name="answers[1]" value="3"><br></td>
+                    <td><span th:text="${test.questions.get(1).getQuestion_text()}"/></td>
                     <td><input type="radio" name="answers[1]" value="4"><br></td>
-                    <td><input type="radio" name="answers[1]" value="5"><br></td>
-                    <td><input type="radio" name="answers[1]" value="0"><br></td>
+                    <td><input type="radio" name="answers[1]" value="3"><br></td>
+                    <td><input type="radio" name="answers[1]" value="2"><br></td>
+                    <td><input type="radio" name="answers[1]" value="1"><br></td>
                 </tr>
                 <tr>
-                    <td><span th:text="${test.questions.get(2).getText()}"/></td>
-                    <td><input type="radio" name="answers[2]" value="1"><br></td>
-                    <td><input type="radio" name="answers[2]" value="2"><br></td>
-                    <td><input type="radio" name="answers[2]" value="3"><br></td>
+                    <td><span th:text="${test.questions.get(2).getQuestion_text()}"/></td>
                     <td><input type="radio" name="answers[2]" value="4"><br></td>
-                    <td><input type="radio" name="answers[2]" value="5"><br></td>
-                    <td><input type="radio" name="answers[2]" value="0"><br></td>
+                    <td><input type="radio" name="answers[2]" value="3"><br></td>
+                    <td><input type="radio" name="answers[2]" value="2"><br></td>
+                    <td><input type="radio" name="answers[2]" value="1"><br></td>
                 </tr>
                 <tr>
-                    <td><span th:text="${test.questions.get(3).getText()}"/></td>
-                    <td><input type="radio" name="answers[3]" value="1"><br></td>
-                    <td><input type="radio" name="answers[3]" value="2"><br></td>
-                    <td><input type="radio" name="answers[3]" value="3"><br></td>
+                    <td><span th:text="${test.questions.get(3).getQuestion_text()}"/></td>
                     <td><input type="radio" name="answers[3]" value="4"><br></td>
-                    <td><input type="radio" name="answers[3]" value="5"><br></td>
-                    <td><input type="radio" name="answers[3]" value="0"><br></td>
+                    <td><input type="radio" name="answers[3]" value="3"><br></td>
+                    <td><input type="radio" name="answers[3]" value="2"><br></td>
+                    <td><input type="radio" name="answers[3]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(4).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[4]" value="4"><br></td>
+                    <td><input type="radio" name="answers[4]" value="3"><br></td>
+                    <td><input type="radio" name="answers[4]" value="2"><br></td>
+                    <td><input type="radio" name="answers[4]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(5).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[5]" value="4"><br></td>
+                    <td><input type="radio" name="answers[5]" value="3"><br></td>
+                    <td><input type="radio" name="answers[5]" value="2"><br></td>
+                    <td><input type="radio" name="answers[5]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(6).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[6]" value="4"><br></td>
+                    <td><input type="radio" name="answers[6]" value="3"><br></td>
+                    <td><input type="radio" name="answers[6]" value="2"><br></td>
+                    <td><input type="radio" name="answers[6]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(7).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[7]" value="4"><br></td>
+                    <td><input type="radio" name="answers[7]" value="3"><br></td>
+                    <td><input type="radio" name="answers[7]" value="2"><br></td>
+                    <td><input type="radio" name="answers[7]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(8).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[8]" value="4"><br></td>
+                    <td><input type="radio" name="answers[8]" value="3"><br></td>
+                    <td><input type="radio" name="answers[8]" value="2"><br></td>
+                    <td><input type="radio" name="answers[8]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(9).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[9]" value="4"><br></td>
+                    <td><input type="radio" name="answers[9]" value="3"><br></td>
+                    <td><input type="radio" name="answers[9]" value="2"><br></td>
+                    <td><input type="radio" name="answers[9]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(10).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[10]" value="4"><br></td>
+                    <td><input type="radio" name="answers[10]" value="3"><br></td>
+                    <td><input type="radio" name="answers[10]" value="2"><br></td>
+                    <td><input type="radio" name="answers[10]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(11).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[11]" value="4"><br></td>
+                    <td><input type="radio" name="answers[11]" value="3"><br></td>
+                    <td><input type="radio" name="answers[11]" value="2"><br></td>
+                    <td><input type="radio" name="answers[11]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(12).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[12]" value="4"><br></td>
+                    <td><input type="radio" name="answers[12]" value="3"><br></td>
+                    <td><input type="radio" name="answers[12]" value="2"><br></td>
+                    <td><input type="radio" name="answers[12]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(13).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[13]" value="4"><br></td>
+                    <td><input type="radio" name="answers[13]" value="3"><br></td>
+                    <td><input type="radio" name="answers[13]" value="2"><br></td>
+                    <td><input type="radio" name="answers[13]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(14).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[14]" value="4"><br></td>
+                    <td><input type="radio" name="answers[14]" value="3"><br></td>
+                    <td><input type="radio" name="answers[14]" value="2"><br></td>
+                    <td><input type="radio" name="answers[14]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(15).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[15]" value="4"><br></td>
+                    <td><input type="radio" name="answers[15]" value="3"><br></td>
+                    <td><input type="radio" name="answers[15]" value="2"><br></td>
+                    <td><input type="radio" name="answers[15]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(16).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[16]" value="4"><br></td>
+                    <td><input type="radio" name="answers[16]" value="3"><br></td>
+                    <td><input type="radio" name="answers[16]" value="2"><br></td>
+                    <td><input type="radio" name="answers[16]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(17).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[17]" value="4"><br></td>
+                    <td><input type="radio" name="answers[17]" value="3"><br></td>
+                    <td><input type="radio" name="answers[17]" value="2"><br></td>
+                    <td><input type="radio" name="answers[17]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(18).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[18]" value="4"><br></td>
+                    <td><input type="radio" name="answers[18]" value="3"><br></td>
+                    <td><input type="radio" name="answers[18]" value="2"><br></td>
+                    <td><input type="radio" name="answers[18]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(19).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[19]" value="4"><br></td>
+                    <td><input type="radio" name="answers[19]" value="3"><br></td>
+                    <td><input type="radio" name="answers[19]" value="2"><br></td>
+                    <td><input type="radio" name="answers[19]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(20).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[20]" value="4"><br></td>
+                    <td><input type="radio" name="answers[20]" value="3"><br></td>
+                    <td><input type="radio" name="answers[20]" value="2"><br></td>
+                    <td><input type="radio" name="answers[20]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(21).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[21]" value="4"><br></td>
+                    <td><input type="radio" name="answers[21]" value="3"><br></td>
+                    <td><input type="radio" name="answers[21]" value="2"><br></td>
+                    <td><input type="radio" name="answers[21]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(22).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[22]" value="4"><br></td>
+                    <td><input type="radio" name="answers[22]" value="3"><br></td>
+                    <td><input type="radio" name="answers[22]" value="2"><br></td>
+                    <td><input type="radio" name="answers[22]" value="1"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(23).getQuestion_text()}"/></td>
+                    <td><input type="radio" name="answers[23]" value="4"><br></td>
+                    <td><input type="radio" name="answers[23]" value="3"><br></td>
+                    <td><input type="radio" name="answers[23]" value="2"><br></td>
+                    <td><input type="radio" name="answers[23]" value="1"><br></td>
                 </tr>
             </tbody>
             <tr>

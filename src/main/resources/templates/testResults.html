@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/login.css">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Your test results:</h2>
+<span th:text="${result.calculatedResult}"/>
+<span th:text="${result.level}" id="level"/>
+<span th:text="${result.levelQuote}" id="qoute"/>
+
+<script>
+    var qoute = document.getElementById("qoute");
+    var level = document.getElementById("level");
+    function changeColor(){
+        if (level.innerHTML === "1"|| level.innerHTML === "2" || level.innerHTML === "3"){
+            qoute.style.color = "green";
+            level.style.color = "green";
+        }else if (level.innerHTML === "4" || level.innerText === "5" || level.innerText === "6"){
+            qoute.style.color = "yellow";
+            level.style.color = "yellow";
+        }else if (level.innerHTML === "7" || level.innerHTML === "8" || level.innerHTML === "9" ){
+            qoute.style.color = "red";
+            level.style.color = "red";
+        }
+    }
+    changeColor();
+
+
+
+
+</script>
+</body>
+</html>

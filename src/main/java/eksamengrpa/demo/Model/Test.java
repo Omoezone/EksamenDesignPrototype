@@ -14,12 +14,18 @@ public class Test {
     public Test() {
     }
 
+    public Test(ArrayList<Question> questions) {
+        this.questions = questions;
+    }
+
     public Test(int id, ArrayList<Question> questions, ArrayList<Integer> answers) {
         this.id = id;
         this.questions = questions;
         this.answers = answers;
 
     }
+
+
 
     public int getId() {
         return id;
