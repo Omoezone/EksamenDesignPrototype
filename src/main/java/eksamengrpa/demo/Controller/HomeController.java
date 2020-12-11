@@ -31,5 +31,40 @@ public class HomeController {
         }else
             return "redirect:/";
     }
+    @GetMapping("/takeTest")
+    public String takeTest(Model model){
+        Question question = new Question();
+        question.setText("Har du tit ondt i maven?");
+        Question question1 = new Question();
+        question1.setText("Har du tit ondt i hovedet?");
+        Question question2 = new Question();
+        question2.setText("Har du svært ved at sove?");
+        Question question3 = new Question();
+        question3.setText("Er du tit udmattet?");
+
+        Test test = new Test();
+        test.getQuestions().add(question);
+        test.getQuestions().add(question1);
+        test.getQuestions().add(question2);
+        test.getQuestions().add(question3);
+        int i = 0;
+        for (Question q: test.getQuestions()) {
+            System.out.println(test.getQuestions().get(i));
+            i++;
+        }
+        model.addAttribute("test",test);
+        return "/takeTest";
+    }
+
+    @PostMapping("/submitTest")
+    public String submitTest(@ModelAttribute Test test){
+        int i = 0;
+        for (Integer x: test.getAnswers()) {
+            System.out.println(test.getAnswers().get(i));
+            i++;
+        }
+        return "redirect:/";
+    }
+
 
 }

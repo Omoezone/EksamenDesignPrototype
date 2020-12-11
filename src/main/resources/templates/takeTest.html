@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table>
+        <form action="/submitTest" method="post">
+            <thead>
+                <tr>
+                    <td><span>Spørgsmål</span></td>
+                    <td><span>Meget uenig</span></td>
+                    <td><span>Lidt uenig</span></td>
+                    <td><span>Hverken enten eller</span></td>
+                    <td><span>Lidt enig</span></td>
+                    <td><span>Meget enig</span></td>
+                    <td><span>Ikke relevant</span></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span th:text="${test.questions.get(0).getText()}"/></td>
+                    <td><input type="radio" name="answers[0]" value="1"><br></td>
+                    <td><input type="radio" name="answers[0]" value="2"><br></td>
+                    <td><input type="radio" name="answers[0]" value="3"><br></td>
+                    <td><input type="radio" name="answers[0]" value="4"><br></td>
+                    <td><input type="radio" name="answers[0]" value="5"><br></td>
+                    <td><input type="radio" name="answers[0]" value="0"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(1).getText()}"/></td>
+                    <td><input type="radio" name="answers[1]" value="1"><br></td>
+                    <td><input type="radio" name="answers[1" value="2"><br></td>
+                    <td><input type="radio" name="answers[1]" value="3"><br></td>
+                    <td><input type="radio" name="answers[1]" value="4"><br></td>
+                    <td><input type="radio" name="answers[1]" value="5"><br></td>
+                    <td><input type="radio" name="answers[1]" value="0"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(2).getText()}"/></td>
+                    <td><input type="radio" name="answers[2]" value="1"><br></td>
+                    <td><input type="radio" name="answers[2]" value="2"><br></td>
+                    <td><input type="radio" name="answers[2]" value="3"><br></td>
+                    <td><input type="radio" name="answers[2]" value="4"><br></td>
+                    <td><input type="radio" name="answers[2]" value="5"><br></td>
+                    <td><input type="radio" name="answers[2]" value="0"><br></td>
+                </tr>
+                <tr>
+                    <td><span th:text="${test.questions.get(3).getText()}"/></td>
+                    <td><input type="radio" name="answers[3]" value="1"><br></td>
+                    <td><input type="radio" name="answers[3]" value="2"><br></td>
+                    <td><input type="radio" name="answers[3]" value="3"><br></td>
+                    <td><input type="radio" name="answers[3]" value="4"><br></td>
+                    <td><input type="radio" name="answers[3]" value="5"><br></td>
+                    <td><input type="radio" name="answers[3]" value="0"><br></td>
+                </tr>
+            </tbody>
+            <tr>
+                <td><input class="button" type="submit" value="Submit"></td>
+            </tr>
+        </form>
+    </table>
+</div>
+
+</body>
+</html>
