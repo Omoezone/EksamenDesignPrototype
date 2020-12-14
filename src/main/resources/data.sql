@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS question (
     question_text varchar(60),
     question_type varchar(45)
 );
-INSERT INTO login VALUES('wilTest@hotstuff.dk','123456','Type1');
+INSERT INTO login VALUES('wilTest@hotstuff.dk','123456','typeb');
 INSERT INTO bruger VALUES(1,1,'wilTest@hotstuff.dk','William','Omoe',88888888,'male',22,'Denmark','KEA','Student','Datamatik');
 INSERT INTO question (question_text, question_type) VALUES
 ('Hovedepine',1),
