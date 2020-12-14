@@ -17,7 +17,7 @@ public class BrugerRepo {
     JdbcTemplate template;
     // Tror det er fordi vi ikke har lavet entity og id annotationer, så kan den ikke finde ud af det, men ikkke sikker og super bruger drillede da jeg prøvede det .c
     public List<Bruger> findByEmail(LoginAuthenticator l){
-        String sql = "SELECT bruger_firstName AS firstName, bruger_lastName AS lastName, bruger_email AS email, bruger_telephone AS telephone, bruger_gender AS gender, bruger_age AS age, bruger_country AS country FROM bruger WHERE bruger_email = ?";
+        String sql = "SELECT bruger_id, bruger_firstName AS firstName, bruger_lastName AS lastName, bruger_email AS email, bruger_telephone AS telephone, bruger_gender AS gender, bruger_age AS age, bruger_country AS country FROM bruger WHERE bruger_email = ?";
         RowMapper<Bruger> rowMapper = new BeanPropertyRowMapper<>(Bruger.class);
         return template.query(sql, rowMapper, l.getEmail());
     }

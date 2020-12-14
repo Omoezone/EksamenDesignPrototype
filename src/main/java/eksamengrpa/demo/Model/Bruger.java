@@ -11,6 +11,7 @@ import java.util.ListIterator;
 @Entity
 public class Bruger implements List<Bruger> {
     @Id
+    private int bruger_id;
     private String email;
     private String firstName;
     private String lastName;
@@ -37,6 +38,14 @@ public class Bruger implements List<Bruger> {
 
     public Bruger() {
 
+    }
+
+    public int getBruger_id() {
+        return bruger_id;
+    }
+
+    public void setBruger_id(int bruger_id) {
+        this.bruger_id = bruger_id;
     }
 
     public long getTelephone() {
