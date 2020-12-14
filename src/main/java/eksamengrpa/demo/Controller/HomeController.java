@@ -5,16 +5,16 @@ import eksamengrpa.demo.Model.Question;
 import eksamengrpa.demo.Model.Result;
 import eksamengrpa.demo.Model.Test;
 import eksamengrpa.demo.Service.QuestionService;
+import eksamengrpa.demo.Service.ResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import eksamengrpa.demo.Service.LoginAuthenticatorService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 @Controller
@@ -25,6 +25,9 @@ public class HomeController {
 
     @Autowired
     LoginAuthenticatorService loginService;
+
+    @Autowired
+    ResultService resultService;
 
 
     @GetMapping("/")
@@ -59,8 +62,10 @@ public class HomeController {
     @PostMapping("/submitTest")
     public String submitTest(@ModelAttribute Test test, Model model){
         Result testResult = new Result();
+        testResult.setResult_test_date(LocalDate.now().toString());
         testResult.calculateTestResult(test);
-        System.out.println(testResult.getLevel());
+        testResult.setResult_test_languange("da");
+        resultService.saveResult(testResult);
         model.addAttribute("result",testResult);
         return "/testResults";
     }
