@@ -18,7 +18,10 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="bruger: ${brugere}">
+            <!--<tr th:each="bruger: ${brugere}">
+                <td th:text="${bruger.firstName}" style="font-size: large"/>
+            </tr>-->
+            <tr>
                 <td th:text="${bruger.firstName}" style="font-size: large"/>
             </tr>
             </tbody>
@@ -28,7 +31,7 @@
         <table>
             <tbody>
             <tr>
-                <td><a href="/takeTest"><button>Test</button></a></td>
+                <td><a th:href="@{'/takeTest/' + ${bruger.bruger_id}}"><button>Test</button></a></td>
             </tr>
             </tbody>
         </table>
