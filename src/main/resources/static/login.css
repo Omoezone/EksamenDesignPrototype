@@ -15,7 +15,9 @@ body {
     border: 1px solid black;
 }
 /* Page Content */
-.content {padding:20px;}
+.content {
+    padding:20px;
+}
 p{
     font-family: "Times New Roman";
 }
@@ -53,10 +55,41 @@ button:hover {
     border: 1px solid black;
     border-radius: 10px;
 }
+#loginId{
+    padding: 25px;
+    background-color: lightslategray;
+    margin: auto;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
 .headerFrame1{
     flex: 0 0 96%;
     padding: 15px 0px 0px 10px;
 }
 .headerFrame2{
     flex: 1;
+}
+#box1{
+    width: 100%;
+    margin: -8px;
+    text-align: center;
+}
+#box2{
+    width: 100%;
+    text-align: center;
+}
+.container{
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+    height: 300px;
+}
+#loginImage{
+    bottom: 34.4rem;
+    position: absolute;
+    margin:0 auto;
+    left:0;
+    right:0;
 }
