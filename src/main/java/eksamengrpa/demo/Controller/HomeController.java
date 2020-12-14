@@ -11,6 +11,7 @@ import eksamengrpa.demo.Service.LoginAuthenticatorService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.time.LocalDate;
@@ -44,30 +45,30 @@ public class HomeController {
         Boolean test = loginService.authenticate(login);
         System.out.println(test);
         if(test){
-            List<Bruger> brugerList = brugerService.findByEmail(login);
-            model.addAttribute("brugere", brugerList);
+            Bruger bruger = brugerService.findByEmail(login);
+            System.out.println("Detter er fra FrontPage" + bruger.getBruger_id());
+            model.addAttribute("bruger", bruger);
            /* brugerService.findByEmail(login);*/
             return "/brugerside";
         }else
             return "redirect:/";
     }
-    @GetMapping("/takeTest")
-    public String takeTest(Model model){
+    @GetMapping("/takeTest/{bruger_id}")
+    public String takeTest(@PathVariable("bruger_id") int id, Model model){
         ArrayList<Question> allQuestions = questionService.fetchAll();
+        Bruger _bruger = brugerService.findById(id);
+        System.out.println("Det er fra take test:" + _bruger);
         Test test = new Test(allQuestions);
-        int i = 0;
-        for (Question q: test.getQuestions()) {
-            System.out.println(test.getQuestions().get(i));
-            i++;
-        }
+        model.addAttribute("bruger",_bruger);
         model.addAttribute("test",test);
-
         return "/takeTest";
     }
 
-    @PostMapping("/submitTest")
-    public String submitTest(@ModelAttribute Test test, Model model){
-        Result testResult = new Result();
+    @PostMapping("/submitTest/{bruger_id}")
+    public String submitTest(@ModelAttribute Test test, @PathVariable("bruger_id") int id, Model model){
+        Bruger _bruger = brugerService.findById(id);
+        Result testResult = new Result(_bruger.getBruger_id());
+        System.out.println("Dette er fra submit test" + testResult.getBruger_id());
         testResult.setResult_test_date(LocalDate.now().toString());
         testResult.calculateTestResult(test);
         testResult.setResult_test_languange("da");

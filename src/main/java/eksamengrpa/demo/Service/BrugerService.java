@@ -14,7 +14,10 @@ public class BrugerService {
     @Autowired
     BrugerRepo brugerRepo;
 
-    public List<Bruger> findByEmail(LoginAuthenticator l){
+    public Bruger findByEmail(LoginAuthenticator l){
         return brugerRepo.findByEmail(l);
+    }
+    public Bruger findById(int id){
+        return brugerRepo.findById(id);
     }
 }
