@@ -11,17 +11,24 @@ body {
     background: lightslategray;
     color: white;
     font-size: 10px;
+    display: flex;
+    border: 1px solid black;
 }
 /* Page Content */
 .content {padding:20px;}
-
+p{
+    font-family: "Times New Roman";
+}
+h{
+    font-family: "Times New Roman";
+}
 button {
-    background-color: #4CAF50;
+    background-color: lightblue;
     width: 100%;
     color: white;
     padding: 15px;
     margin: 10px 0px;
-    border: 1px;
+    border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -45,4 +52,11 @@ button:hover {
     width: 25%;
     border: 1px solid black;
     border-radius: 10px;
+}
+.headerFrame1{
+    flex: 0 0 96%;
+    padding: 15px 0px 0px 10px;
+}
+.headerFrame2{
+    flex: 1;
 }

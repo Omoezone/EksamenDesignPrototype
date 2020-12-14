@@ -18,9 +18,15 @@
 <body>
     <!-- Dette indhold skal indeholde header for siden -->
     <div class="header">
+        <div class="headerFrame1">
         <h1 style="text-align: left;font-size:30px";>Stressbarometer®</h1>
+        </div>
+        <div class="headerFrame2">
+        <button style="border-radius: 50px; text-align: right; width:3.6rem; background-color:lightgray">
+            <img style="width:30px;height:30px" src="/person-male.png"/></button>
+        </div>
     </div>
-    <h1 style="text-align: center">Stressbarometer®</h1>
+    <br><h1 style="text-align: center">Stressbarometer®</h1>
     <form name="loginCheck" action="/frontPage" method="post">
         <div class="loginContainer">
             <!-- Dette div indeholder login -->
@@ -30,9 +36,9 @@
             <!-- Type dropdown -->
             <label for="login">Choose type: </label>
             <select name="type" id="login">
-                <option value="typeb">User</option>
-                <option value="typek">Customer</option>
-                <option value="typea">Adin</option>
+                <option value="typeb" type="font-family: Times New Roman">User</option>
+                <option value="typek" type="font-family: Times New Roman">Customer</option>
+                <option value="typea" type="font-family: Times New Roman">Adin</option>
             </select>
 
             <p id="errorid"></p>
