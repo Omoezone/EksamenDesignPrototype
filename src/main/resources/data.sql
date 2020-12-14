@@ -36,9 +36,12 @@ CREATE TABLE IF NOT EXISTS admin_ (
 CREATE TABLE IF NOT EXISTS result (
 	result_id int not null auto_increment unique primary key,
     bruger_id int not null,
-    kvantitiv_id int not null,
     result_test_date DATE,
-    result_test_languange varchar(45) not null
+    result_test_languange varchar(45) not null,
+    result_score int not null,
+    result_stress_level int not null,
+     CONSTRAINT result_fk_bruger
+		FOREIGN KEY (bruger_id) REFERENCES bruger (bruger_id)
 );
 
 CREATE TABLE IF NOT EXISTS question (
@@ -48,6 +51,31 @@ CREATE TABLE IF NOT EXISTS question (
 );
 INSERT INTO login VALUES('wilTest@hotstuff.dk','123456','Type1');
 INSERT INTO bruger VALUES(1,1,'wilTest@hotstuff.dk','William','Omoe',88888888,'male',22,'Denmark','KEA','Student','Datamatik');
-
-SELECT * FROM bruger;
-SELECT * FROM bruger JOIN login WHERE bruger_email = login_email AND login_password = 123456;
+INSERT INTO question (question_text, question_type) VALUES
+('Hovedepine',1),
+('Hjertebanken',1),
+('Trykken for brystet',1),
+('Svimmelhed',1),
+('Ondt i maven',1),
+('Diare',1),
+('Hyppig vandladning',1),
+('Ondt i kroppen',1),
+('Haft svært ved at huske',1),
+('haft koncentrationsbesvær',1),
+('Haft svært ved at tage besultninger',1),
+('haft svært ved at tænkte klart',1),
+('Følt dig rastløs',1),
+('Været irritabel',1),
+('Følt dig trist/deprimeret',1),
+('Haft angstanfald',1),
+('Haft svært ved at falde i søvn',1),
+('Haft svært ved at sove igennem',1),
+('Været meget nervøs',1),
+('Ikke orket at beskæftige dig med noget',1),
+('Været initiativløs',1),
+('Følt dig træt',1),
+('Røget mere end du plejer',1),
+('Drukket mere alkohol/spist sukker end du plejer',1)
+;
+SELECT * FROM question;
+SELECT login_email, login_password FROM login WHERE login_email = 'wilTest@hotstuff.dk' AND login_password = '123456';
