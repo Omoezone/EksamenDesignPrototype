@@ -15,6 +15,10 @@ public class Result {
     public Result() {
     }
 
+    public Result(int bruger_id) {
+        this.bruger_id = bruger_id;
+    }
+
     public Result(int id, int calculatedResult) {
         this.result_id = id;
         this.result_score = calculatedResult;
