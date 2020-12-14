@@ -22,7 +22,7 @@ public class ResultRepo {
     }
 
     public List<Result> findResultForUser(int bruger_id){
-        String sql = "SELECT (result_id, bruger_id, result_test_date, result_test_languange, result_score, result_stress_level) FROM result r JOIN bruger b ON r.bruger_id = b.bruger_id WHERE r.bruger_id = ?;";
+        String sql = "SELECT result_id, bruger_id, result_test_date, result_test_languange, result_score, result_stress_level FROM result WHERE bruger_id = ?;";
         RowMapper<Result> rowMapper = new BeanPropertyRowMapper<>(Result.class);
         return template.query(sql,rowMapper,bruger_id);
 

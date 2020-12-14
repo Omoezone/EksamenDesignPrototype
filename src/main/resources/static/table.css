@@ -2,3 +2,47 @@
     width: 50%;
     margin: auto;
 }
+.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+.table-wrapper {
+    position: relative;
+}
+
+.table-scroll {
+    height: 332px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+td, th {
+    /*border: 1px solid #3C5898;*/
+    text-align: center;
+    padding: 2px;
+    /*color: black;*/
+}
+
+tr:nth-child(Even) {
+    background-color: #9CB2CE;
+}
+
+th {
+    font-family: Cambria;
+}
+
+#contractTableWidth {
+    width: 70%;
+}
+
+#wrapper {
+    display: flex;
+}
+
+#first {
+    width: 65%;
+}
+
+#second {
+    width: 35%;
+}

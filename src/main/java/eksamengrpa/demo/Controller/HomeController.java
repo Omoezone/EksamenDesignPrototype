@@ -47,7 +47,8 @@ public class HomeController {
         if(test){
             Bruger bruger = brugerService.findByEmail(login);
             model.addAttribute("bruger", bruger);
-           /* brugerService.findByEmail(login);*/
+            List<Result> resultList = resultService.findResultForUser(bruger.getBruger_id());
+            model.addAttribute("results", resultList);
             return "/brugerside";
         }else
             return "redirect:/";
