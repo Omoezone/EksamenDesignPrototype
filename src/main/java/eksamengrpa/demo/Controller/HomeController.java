@@ -46,7 +46,6 @@ public class HomeController {
         System.out.println(test);
         if(test){
             Bruger bruger = brugerService.findByEmail(login);
-            System.out.println("Detter er fra FrontPage" + bruger.getBruger_id());
             model.addAttribute("bruger", bruger);
            /* brugerService.findByEmail(login);*/
             return "/brugerside";
@@ -57,7 +56,6 @@ public class HomeController {
     public String takeTest(@PathVariable("bruger_id") int id, Model model){
         ArrayList<Question> allQuestions = questionService.fetchAll();
         Bruger _bruger = brugerService.findById(id);
-        System.out.println("Det er fra take test:" + _bruger);
         Test test = new Test(allQuestions);
         model.addAttribute("bruger",_bruger);
         model.addAttribute("test",test);
@@ -68,14 +66,24 @@ public class HomeController {
     public String submitTest(@ModelAttribute Test test, @PathVariable("bruger_id") int id, Model model){
         Bruger _bruger = brugerService.findById(id);
         Result testResult = new Result(_bruger.getBruger_id());
-        System.out.println("Dette er fra submit test" + testResult.getBruger_id());
         testResult.setResult_test_date(LocalDate.now().toString());
         testResult.calculateTestResult(test);
         testResult.setResult_test_languange("da");
         resultService.saveResult(testResult);
         model.addAttribute("result",testResult);
+        model.addAttribute("bruger",_bruger);
         return "/testResults";
     }
+
+    @GetMapping("/returnToBruger/{bruger_id}")
+    public String returnToBruger(@PathVariable("bruger_id") int id, Model model){
+        Bruger bruger = brugerService.findById(id);
+        System.out.println(bruger);
+        model.addAttribute(bruger);
+        return "/brugerside";
+    }
+
+
 
 
 }

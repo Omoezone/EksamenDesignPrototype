@@ -12,6 +12,8 @@
 <span th:text="${result.result_stress_level}" id="level"/>
 <span th:text="${result.levelQuote}" id="qoute"/>
 
+
+<a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"><button>Test</button></a>
 <script>
     var qoute = document.getElementById("qoute");
     var level = document.getElementById("level");
