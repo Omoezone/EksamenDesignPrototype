@@ -80,7 +80,9 @@ public class HomeController {
     public String returnToBruger(@PathVariable("bruger_id") int id, Model model){
         Bruger bruger = brugerService.findById(id);
         System.out.println(bruger);
-        model.addAttribute(bruger);
+        model.addAttribute("bruger",bruger);
+        List<Result> resultList = resultService.findResultForUser(bruger.getBruger_id());
+        model.addAttribute("results", resultList);
         return "/brugerside";
     }
 
