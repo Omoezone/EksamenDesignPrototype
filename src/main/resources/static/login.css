@@ -1,18 +1,17 @@
 body {
     font-family: Arial;
     margin: 0;
-    background-color: lightgray;
+    background-color: white;
 }
 
 /* Header/Logo Title */
 .header {
     padding: 30px 30px 5px 10px;
     text-align: center;
-    background: lightslategray;
+    background: white;
     color: white;
     font-size: 10px;
     display: flex;
-    border: 1px solid black;
 }
 /* Page Content */
 .content {
@@ -24,7 +23,7 @@ p{
 h{
     font-family: "Times New Roman";
 }
-button {
+.button1 {
     background-color: lightblue;
     width: 100%;
     color: white;
@@ -95,4 +94,20 @@ button:hover {
     margin:0 auto;
     left:0;
     right:0;
+}
+.containerresult{
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+                                /* center items vertically, in this case */
+    align-items: initial;        /* center items horizontally, in this case */
+    height: 300px;
+}
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
 }

@@ -33,6 +33,10 @@ public class HomeController {
     @Autowired
     BrugerService brugerService;
 
+/*
+    Lis' colorscheme, logo
+*/
+
 
     @GetMapping("/")
     public String index(){

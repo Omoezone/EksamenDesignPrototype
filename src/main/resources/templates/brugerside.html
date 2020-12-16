@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <title>Bruger side</title>
 </head>
-    <div class="header">
-        <h1>Header</h1>
-        <p>BAROMETER</p>
-    </div>
+<div class="header" style="border: #636d76 solid 2px">
+    <a th:href="@{'/'}" methods="get" ><button style="background-color: white; border: none"><img style="text-align: left" src="/stressbarometer-logoTM-med-luft.jpg" height="92" width="331"/></button></a>
+</div>
     <div class="centerTable" style="text-align: center">
         <table class="center">
             <thead>
@@ -28,19 +27,19 @@
             </table>
     </div>
     <div class="wrapper">
-        <table style="border: 1px solid lightslategray">
+        <table>
             <thead style="background-color: lightslategray; border: 1px solid lightslategray">
             <tr>
-                <th>Test Dato</th>
-                <th>Stress Points</th>
-                <th>Stress Level</th>
+                <th style="color: white">Test Dato</th>
+                <th style="color: white">Stress Level</th>
+                <th style="color: white">Valgmuligheder for tests</th>
             </tr>
             </thead>
             <tbody style="border: 1px solid lightslategray">
             <tr style="border: 1px solid lightslategray" th:each="result: ${results}">
                 <td style="border: 1px solid lightslategray" th:text="${result.result_test_date}"></td>
-                <td style="border: 1px solid lightslategray" th:text="${result.result_score}"></td>
                 <td style="border: 1px solid lightslategray" th:text="${result.result_stress_level}"></td>
+                <td style="border: 1px solid lightslategray"><button class="button1" style="width: 49%">Download</button> <button class="button1" style="float: left; width: 47%">Se Test</button></td>
             </tr>
             </tbody>
         </table>
@@ -49,7 +48,7 @@
         <table>
             <tbody>
             <tr>
-                <td><a th:href="@{'/takeTest/' + ${bruger.bruger_id}}"><button style="border: 1px solid lightslategray">Test</button></a></td>
+                <td><a th:href="@{'/takeTest/' + ${bruger.bruger_id}}"><button class="button1"  style="border: 1px solid lightslategray">Test</button></a></td>
             </tr>
 <!--            <tr>
                 <td><a th:href="@{'/submitTest/' + ${bruger.bruger_id}}"><button>Result</button></a></td>

@@ -16,9 +16,9 @@ public class LoginAuthenticatorRepo {
     public Boolean authenticate(LoginAuthenticator login){
         //midlertidig løsning til at godkende et login
         try{
-            String sql = "SELECT login_email, login_password FROM login WHERE login_email = ? AND login_password = ? AND login_type = ?";
+            String sql = "SELECT login_email, login_password FROM login WHERE login_email = ? AND login_password = ?";
             RowMapper<LoginAuthenticator> rowMapper = new BeanPropertyRowMapper<>(LoginAuthenticator.class);
-            LoginAuthenticator newLogin = template.queryForObject(sql,rowMapper,login.getEmail(),login.getPassword(),login.getType());
+            template.queryForObject(sql,rowMapper,login.getEmail(),login.getPassword());
             return true;
         }catch (Exception exception){
             System.out.println("It didn't work");

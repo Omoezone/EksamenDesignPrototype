@@ -88,10 +88,10 @@ public class Result {
 
         if(this.result_score <= 30){
             this.result_stress_level = 1;
-            this.levelQuote = "Du trives godt og har en god blance mellem krav of ressourcer.";
+            this.levelQuote = "Du trives godt og har en god balance mellem krav of ressourcer.";
         }else if(this.result_score >= 31 && this.result_score <= 33){
             this.result_stress_level = 2;
-            this.levelQuote = "Du trives godt og har en god blance mellem krav of ressourcer.";
+            this.levelQuote = "Du trives godt og har en god balance mellem krav of ressourcer.";
         }else if(this.result_score >= 34 && this.result_score <= 36){
             this.result_stress_level = 3;
             this.levelQuote = "Du trives og har balance mellem krav og ressourcer";
@@ -100,7 +100,7 @@ public class Result {
             this.levelQuote = "Ekstra udfordringer i en periode";
         }else if(this.result_score >= 41 && this.result_score <= 45){
             this.result_stress_level = 5;
-            this.levelQuote = "Overbelsatning. Fokus: Ekstra søvn, planlæg fri/ferie/ro.";
+            this.levelQuote = "Overbelastning. Fokus: Ekstra søvn, planlæg fri/ferie/ro.";
         }else if(this.result_score >= 46 && this.result_score <= 56){
             this.result_stress_level = 6;
             this.levelQuote = "Massiv overbelastning. Fokus: Søvn, ro, prioriterer hårdt i krav/opgaver";
