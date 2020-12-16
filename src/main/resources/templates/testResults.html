@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="header" style="border: #636d76 solid 2px">
-    <a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}"> <button href="/brugerside" style="background-color: white; border: none"><img style="text-align: left" src="/stressbarometer-logoTM-med-luft.jpg" height="92" width="331"/></button></a>
+    <a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"> <button href="/brugerside" style="background-color: white; border: none"><img style="text-align: left" src="/stressbarometer-logoTM-med-luft.jpg" height="92" width="331"/></button></a>
 </div>
 <h2>Your test results:</h2>
 <p style="font-size: x-large">Stress Level: <span th:text="${result.result_stress_level}" id="level"></span></p>
