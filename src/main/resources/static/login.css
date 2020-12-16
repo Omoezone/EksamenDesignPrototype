@@ -48,7 +48,7 @@ button:hover {
 }
 .loginContainer {
     padding: 25px;
-    background-color: lightsteelblue;
+    background-color: #636d76;
     margin: auto;
     width: 25%;
     border: 1px solid black;
@@ -56,7 +56,7 @@ button:hover {
 }
 #loginId{
     padding: 25px;
-    background-color: lightslategray;
+    background-color: #636d76;
     margin: auto;
     width: 25%;
     border: 1px solid black;
