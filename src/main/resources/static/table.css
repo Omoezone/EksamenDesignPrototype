@@ -24,13 +24,11 @@ td, th {
 
 tr:nth-child(Even) {
     background-color: lightgrey;
-    color: white;
 }
 
 th {
     background-color: lightgrey;
     font-family: Cambria;
-    color: white;
 }
 
 #contractTableWidth {
