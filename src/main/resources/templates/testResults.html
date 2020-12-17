@@ -9,10 +9,11 @@
 <div class="header" style="border: #636d76 solid 2px">
     <a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"> <button href="/brugerside" style="background-color: white; border: none"><img style="text-align: left" src="/stressbarometer-logoTM-med-luft.jpg" height="92" width="331"/></button></a>
 </div>
+<div style="width: fit-content">
 <h2>Your test results:</h2>
 <p style="font-size: x-large">Stress Level: <span th:text="${result.result_stress_level}" id="level"></span></p>
 <p style="font-size: x-large" th:text="${result.levelQuote}" id="qoute"/>
-
+</div>
 <div class="containerresult">
     <p style="font-size: x-large">Download ti gode råd  <button class="button1" style="width: 4%">Her</button></p>
     <a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"><button class="button1" >Return</button></a>
@@ -23,14 +24,14 @@
     var level = document.getElementById("level");
     function changeColor(){
         if (level.innerHTML === "1"|| level.innerHTML === "2" || level.innerHTML === "3"){
-            qoute.style.color = "green";
-            level.style.color = "green";
+            qoute.style.backgroundColor = "green";
+            level.style.backgroundColor = "green";
         }else if (level.innerHTML === "4" || level.innerText === "5" || level.innerText === "6"){
-            qoute.style.color = "yellow";
-            level.style.color = "yellow";
+            qoute.style.backgroundColor = "yellow";
+            level.style.backgroundColor = "yellow";
         }else if (level.innerHTML === "7" || level.innerHTML === "8" || level.innerHTML === "9" ){
-            qoute.style.color = "red";
-            level.style.color = "red";
+            qoute.style.backgroundColor = "red";
+            level.style.backgroundColor = "red";
         }
     }
     changeColor();
