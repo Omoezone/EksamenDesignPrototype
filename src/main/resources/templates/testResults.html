@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/table.css">
     <title>Results</title>
 </head>
 <body>
@@ -16,9 +17,10 @@
 </div>
 <div class="containerresult">
     <p style="font-size: x-large">Download ti gode råd  <button class="button1" style="width: 4%">Her</button></p>
-    <a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"><button class="button1" >Return</button></a>
 </div>
-
+<div style="width: 33%" class="center">
+    <td style="border: none"><a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"><button class="button1"  style="border: 1px solid lightslategray">Return</button></a></td>
+</div>
 <script>
     var qoute = document.getElementById("qoute");
     var level = document.getElementById("level");

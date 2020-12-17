@@ -17,18 +17,20 @@
 }
 
 td, th {
-    /*border: 1px solid #3C5898;*/
     text-align: center;
     padding: 2px;
-    /*color: black;*/
+    border: 1px solid #636d76
 }
 
 tr:nth-child(Even) {
-    background-color: #636d76;
+    background-color: lightgrey;
+    color: white;
 }
 
 th {
+    background-color: lightgrey;
     font-family: Cambria;
+    color: white;
 }
 
 #contractTableWidth {

@@ -2,19 +2,24 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/table.css">
     <title>Title</title>
 </head>
+<div class="header" style="border: #636d76 solid 2px">
+    <a th:href="@{'/returnToBruger/' + ${bruger.bruger_id}}" methods="post"><button style="background-color: white; border: none"><img style="text-align: left" src="/stressbarometer-logoTM-med-luft.jpg" height="92" width="331"/></button></a>
+</div>
 <body>
 <div>
-    <table>
+    <table class="center">
         <form action="#" th:action="@{'/submitTest/' + ${bruger.bruger_id}}" method="post">
             <thead>
                 <tr>
-                    <td><span>Spørgsmål</span></td>
-                    <td><span>Altid</span></td>
-                    <td><span>Ofte</span></td>
-                    <td><span>Sommetider</span></td>
-                    <td><span>Sjældent/aldrig</span></td>
+                    <th style="width: 40%"><span>Spørgsmål</span></th>
+                    <th style="width: 15%"><span>Altid</span></th>
+                    <th style="width: 15%"><span>Ofte</span></th>
+                    <th style="width: 15%"><span>Sommetider</span></th>
+                    <th style="width: 15%"><span>Sjældent/aldrig</span></th>
                 </tr>
             </thead>
             <tbody>
@@ -187,9 +192,9 @@
                     <td><input type="radio" name="answers[23]" value="1"><br></td>
                 </tr>
             </tbody>
-            <tr>
-                <td><input class="button" type="submit" value="Submit"></td>
-            </tr>
+            <div class="center">
+                <td colspan="5" style="border: none; "><input class="button1" type="submit" value="Submit"></td>
+            </div>
         </form>
     </table>
 </div>

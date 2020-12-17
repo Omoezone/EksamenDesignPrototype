@@ -10,8 +10,6 @@ public class Result {
     private String result_test_date;
     private String result_test_languange;
 
-
-
     public Result() {
     }
 
