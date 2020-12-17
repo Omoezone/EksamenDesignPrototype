@@ -24,22 +24,20 @@
             </table>
     </div>
     <div class="wrapper">
-        <div style="width: 24.5%" class="center">
-        <td style="border: none"><a th:href="@{'/takeTest/' + ${bruger.bruger_id}}"><button class="button1"  style="border: 1px solid lightslategray">Test</button></a></td>
-        </div>
         <table class="center">
             <thead style="background-color: #636d76; border: 1px solid #636d76">
+            <td colspan="4" style="border: none; background-color: white"><a th:href="@{'/takeTest/' + ${bruger.bruger_id}}"><button class="button1"  style="border: 1px solid lightslategray">Test</button></a></td>
             <tr>
                 <th style="color: white">Test Dato</th>
                 <th style="color: white">Stress Level</th>
                 <th style="color: white">Valgmuligheder for tests</th>
             </tr>
             </thead>
-            <tbody style="border: 1px solid lightslategray">
-            <tr style="border: 1px solid lightslategray" th:each="result: ${results}">
-                <td style="border: 1px solid lightslategray" th:text="${result.result_test_date}"></td>
-                <td style="border: 1px solid lightslategray" th:text="${result.result_stress_level}"></td>
-                <td style="border: 1px solid lightslategray"><button class="button1" style="width: 49%">Download</button> <button class="button1" style="float: left; width: 47%">Se Test</button></td>
+            <tbody>
+            <tr th:each="result: ${results}">
+                <td style="padding: 10px" th:text="${result.result_test_date}"></td>
+                <td th:text="${result.result_stress_level}"></td>
+                <td style="padding-left: 6px; padding-right: 6px"><button class="button1" style="width: auto; margin: 3px">Download</button> <button class="button1" style="float: left; width: auto; margin: 3px">Se Test</button></td>
             </tr>
             </tbody>
         </table>
