@@ -1,3 +1,7 @@
+@font-face {
+    font-family: StressFont;
+    src: url(/fonts/BarlowCondensed-Light.ttf);
+}
 .centerTable{
     width: 50%;
     margin: auto;
@@ -28,7 +32,7 @@ tr:nth-child(Even) {
 
 th {
     background-color: lightgrey;
-    font-family: Cambria;
+    font-family: StressFont, sans-serif;
 }
 
 #contractTableWidth {
